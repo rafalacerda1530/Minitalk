@@ -12,8 +12,9 @@
 
 #include "../../minitalk.h"
 
-void handler(int sig)
+void handler(int sig, siginfo_t *stc, void *whatever)
 {
+	(void)whatever;
 	static unsigned int	count;
 	static unsigned int	letter;
 
@@ -24,11 +25,19 @@ void handler(int sig)
 	}
 	if (sig == SIGUSR2)
 	{
-		letter += 1 << count;
+		letter += 1 << count; 
 	}
 	count++;
 	if (count == 8)
-		ft_printf("%c", letter);
+	{
+		if (letter == 0)
+		{
+			write(1, "\n", 1);
+			kill(stc->si_pid, SIGUSR2);
+		}
+		else
+			ft_printf("%c", letter);
+	}
 }
 
 int main(void)
@@ -40,13 +49,14 @@ int main(void)
 	pid = getpid();
 	ft_printf("PID: [%d]", pid);
 
-	sa.sa_handler = &handler;
-	sa.sa_flags = 0;
+	sa.sa_sigaction = handler;
+	sa.sa_flags = SA_SIGINFO;
 	sigaction(SIGUSR1, &sa, NULL);
 	sigaction(SIGUSR2, &sa, NULL);
 
 	while (1)
 	{
+		pause();
 	}
 	return 0;
 }

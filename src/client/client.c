@@ -12,20 +12,26 @@
 
 #include "../../minitalk.h"
 
-int	pid_n(char *arg)
-{
-	int	id;
 
-	id = 0;
-	while (*arg)
+void msg_handler(int sig)
+{
+	write(1, "MESSAGE RECEIVED", 16);
+	exit(0);
+}
+
+int	pid_n(char *nptr)
+{
+	int	res;
+	int	cont;
+
+	res = 0;
+	cont = 0;
+	while (nptr[cont] >= '0' && nptr[cont] <= '9')
 	{
-		if (*arg >= '0' && *arg <= '9')
-			id = (id * 10) + (*arg - '0');
-		else
-			return (0);
-		arg++;
+		res = nptr[cont] - '0' + (res * 10);
+		cont++;
 	}
-	return (id);
+	return (res);
 }
 
 void handler(int pid, unsigned char sig)
@@ -50,24 +56,25 @@ void handler(int pid, unsigned char sig)
 	}
 }
 
+
 int	main(int argc, char *argv[])
 {	
 	pid_t	pid;
-
 	if (argc != 3)
 	{
-		ft_printf("Please inform PID, and the string wich you want send!\n");
+		ft_printf("ERRO\n");
 		return (0);
 	}
 	pid = pid_n(argv[1]);
-	ft_printf("%d\n", pid);
 	if (!pid)
-		ft_printf("Please inform a correct PID!!\n");
+		ft_printf("INVALID PID\n");
+	ft_printf("%d\n", pid);
+	signal(SIGUSR2, msg_handler);
 	while (*argv[2])
 	{
 		handler(pid, *argv[2]);
 		argv[2]++;
 	}
-	ft_printf("\n");
+	handler(pid, '\0');
 	return (1);
 }
