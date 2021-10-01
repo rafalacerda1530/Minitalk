@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../minitalk.h"
+#include "../minitalk.h"
 
 void handler(int sig, siginfo_t *stc, void *whatever)
 {

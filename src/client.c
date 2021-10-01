@@ -10,12 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../minitalk.h"
+#include "../minitalk.h"
 
 
 void msg_handler(int sig)
 {
-	write(1, "MESSAGE RECEIVED", 16);
+	if(sig == SIGUSR2)
+		write(1, "MESSAGE RECEIVED", 16);
 	exit(0);
 }
 
@@ -55,7 +56,6 @@ void handler(int pid, unsigned char sig)
 		count++;
 	}
 }
-
 
 int	main(int argc, char *argv[])
 {	
