@@ -41,3 +41,5 @@ fclean: clean
 	rm -rf $(CLIENT) $(SERVER)
 	make -C $(PATH_LIBFT) fclean
 	make -C $(PATH_PRINTF) fclean
+
+re: fclean all
