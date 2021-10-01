@@ -6,11 +6,11 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 22:35:00 by user42            #+#    #+#             */
-/*   Updated: 2021/09/30 22:35:03 by user42           ###   ########.fr       */
+/*   Updated: 2021/09/30 22:39:27 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
+#include "ft_printf.h"
 void	ft_print_char(va_list args, t_flags *s_flags)
 {
 	char	c;

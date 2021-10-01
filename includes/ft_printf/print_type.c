@@ -6,11 +6,11 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 22:35:06 by user42            #+#    #+#             */
-/*   Updated: 2021/09/30 22:35:08 by user42           ###   ########.fr       */
+/*   Updated: 2021/09/30 22:39:20 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
+#include "ft_printf.h"
 void	ft_parse_args(char *str, t_flags *s_flags, va_list args)
 {
 	if ((str[s_flags->index] == 'd') || (str[s_flags->index] == 'i'))

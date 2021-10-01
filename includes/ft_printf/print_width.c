@@ -6,11 +6,11 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 22:35:13 by user42            #+#    #+#             */
-/*   Updated: 2021/09/30 22:35:16 by user42           ###   ########.fr       */
+/*   Updated: 2021/09/30 22:39:13 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
+#include "ft_printf.h"
 void	print_width(int *rest_size, t_flags *s_flags)
 {
 	if (s_flags->hashtag)

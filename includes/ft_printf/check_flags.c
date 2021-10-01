@@ -6,11 +6,11 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 22:34:15 by user42            #+#    #+#             */
-/*   Updated: 2021/09/30 22:34:32 by user42           ###   ########.fr       */
+/*   Updated: 2021/09/30 22:39:49 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
+#include "ft_printf.h"
 void	ft_check_sign(char *str, t_flags *s_flags)
 {
 	while (str[s_flags->index] < '1' && (str[s_flags->index] != '%'))

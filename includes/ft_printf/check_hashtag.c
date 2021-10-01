@@ -6,11 +6,11 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 22:34:24 by user42            #+#    #+#             */
-/*   Updated: 2021/09/30 22:34:29 by user42           ###   ########.fr       */
+/*   Updated: 2021/09/30 22:39:45 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
+#include "ft_printf.h"
 void	check_hashtag(char *str, t_flags *s_flags)
 {
 	if (str[s_flags->index] == '#')

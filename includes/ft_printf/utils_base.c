@@ -6,11 +6,11 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 22:35:29 by user42            #+#    #+#             */
-/*   Updated: 2021/09/30 22:35:39 by user42           ###   ########.fr       */
+/*   Updated: 2021/09/30 22:38:48 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
+#include "ft_printf.h"
 int	ft_checklen_base(unsigned long long num)
 {
 	int	size;
