@@ -21,10 +21,10 @@ OBJ = ${FILE:.c=.o}
 all:  make_libft $(SERVER) $(CLIENT)
 	
 $(SERVER): $(OBJ)
-	@$(CC) $(CFLAGS) ./src/server.o -L $(PATH_LIBFT)libft.a $(PATH_PRINTF)libftprintf.a -o server
+	@$(CC) $(CFLAGS) ./src/server.o $(PATH_LIBFT)libft.a $(PATH_PRINTF)libftprintf.a -o server
 
 $(CLIENT): $(OBJ)
-	@$(CC) $(CFLAGS) ./src/client.o -L $(PATH_LIBFT)libft.a -o client
+	@$(CC) $(CFLAGS) ./src/client.o  $(PATH_LIBFT)libft.a -o client
 
 make_libft:
 	@make -C $(PATH_LIBFT)
