@@ -45,12 +45,12 @@ void handler(int pid, unsigned char sig)
 		if (sig % 2 == 0 || sig == 0)
 		{
 			kill(pid, SIGUSR1);
-			usleep(500);
+			usleep(1100);
 		}
 		else
 		{
 			kill(pid, SIGUSR2);
-			usleep(500);
+			usleep(1100);
 		}
 		sig /= 2;
 		count++;
@@ -62,14 +62,14 @@ int	main(int argc, char *argv[])
 	pid_t	pid;
 	if (argc != 3)
 	{
-		ft_printf("ERRO\n");
+		write(1, "INVALID ARGUMENT\n", 16);
 		return (0);
 	}
 	pid = pid_n(argv[1]);
 	if (!pid)
-		ft_printf("INVALID PID\n");
-	ft_printf("%d\n", pid);
+		write(1,"INVALID PID\n", 13);
 	signal(SIGUSR2, msg_handler);
+
 	while (*argv[2])
 	{
 		handler(pid, *argv[2]);

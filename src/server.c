@@ -36,7 +36,7 @@ void handler(int sig, siginfo_t *stc, void *whatever)
 			kill(stc->si_pid, SIGUSR2);
 		}
 		else
-			ft_printf("%c", letter);
+			write(1, &letter, 1);
 	}
 }
 
