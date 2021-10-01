@@ -3,19 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   client.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rarodrig <rarodrig@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 20:37:32 by rarodrig          #+#    #+#             */
-/*   Updated: 2021/09/23 19:28:05 by rarodrig         ###   ########.fr       */
+/*   Updated: 2021/09/30 23:05:31 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../minitalk.h"
-
-
-void msg_handler(int sig)
+void	msg_handler(int sig)
 {
-	if(sig == SIGUSR2)
+	if (sig == SIGUSR2)
 		write(1, "MESSAGE RECEIVED", 16);
 	exit(0);
 }
@@ -35,7 +33,7 @@ int	pid_n(char *nptr)
 	return (res);
 }
 
-void handler(int pid, unsigned char sig)
+void	handler(int pid, unsigned char sig)
 {
 	int	count;
 
@@ -60,6 +58,7 @@ void handler(int pid, unsigned char sig)
 int	main(int argc, char *argv[])
 {	
 	pid_t	pid;
+
 	if (argc != 3)
 	{
 		write(1, "INVALID ARGUMENT\n", 16);
@@ -67,9 +66,8 @@ int	main(int argc, char *argv[])
 	}
 	pid = pid_n(argv[1]);
 	if (!pid)
-		write(1,"INVALID PID\n", 13);
+		write(1, "INVALID PID\n", 13);
 	signal(SIGUSR2, msg_handler);
-
 	while (*argv[2])
 	{
 		handler(pid, *argv[2]);
