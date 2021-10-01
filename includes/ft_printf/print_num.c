@@ -6,11 +6,12 @@
 /*   By: rarodrig < rarodrig@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 22:34:49 by user42            #+#    #+#             */
-/*   Updated: 2021/10/01 16:33:37 by rarodrig         ###   ########.fr       */
+/*   Updated: 2021/10/01 16:39:29 by rarodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
 void	ft_print_hex(char *str, t_flags *s_flags, va_list args)
 {
 	unsigned int	num;

@@ -6,11 +6,12 @@
 /*   By: rarodrig < rarodrig@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 22:34:37 by user42            #+#    #+#             */
-/*   Updated: 2021/10/01 16:33:29 by rarodrig         ###   ########.fr       */
+/*   Updated: 2021/10/01 16:39:24 by rarodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
 int	ft_printf(const char *str, ...)
 {
 	va_list	args;

@@ -6,11 +6,12 @@
 /*   By: rarodrig < rarodrig@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 22:34:24 by user42            #+#    #+#             */
-/*   Updated: 2021/10/01 16:33:26 by rarodrig         ###   ########.fr       */
+/*   Updated: 2021/10/01 16:39:20 by rarodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
 void	check_hashtag(char *str, t_flags *s_flags)
 {
 	if (str[s_flags->index] == '#')

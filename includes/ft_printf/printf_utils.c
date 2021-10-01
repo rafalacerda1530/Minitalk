@@ -6,11 +6,12 @@
 /*   By: rarodrig < rarodrig@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 22:35:23 by user42            #+#    #+#             */
-/*   Updated: 2021/10/01 16:33:55 by rarodrig         ###   ########.fr       */
+/*   Updated: 2021/10/01 16:39:41 by rarodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
 int	ft_strlen(char *str)
 {
 	int	i;

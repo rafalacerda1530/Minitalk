@@ -6,11 +6,12 @@
 /*   By: rarodrig < rarodrig@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 22:35:13 by user42            #+#    #+#             */
-/*   Updated: 2021/10/01 16:33:49 by rarodrig         ###   ########.fr       */
+/*   Updated: 2021/10/01 16:39:36 by rarodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
 void	print_width(int *rest_size, t_flags *s_flags)
 {
 	if (s_flags->hashtag)
