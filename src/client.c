@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   client.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rarodrig < rarodrig@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 20:37:32 by rarodrig          #+#    #+#             */
-/*   Updated: 2021/09/30 23:05:31 by user42           ###   ########.fr       */
+/*   Updated: 2021/10/01 16:42:04 by rarodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../minitalk.h"
+
 void	msg_handler(int sig)
 {
 	if (sig == SIGUSR2)
